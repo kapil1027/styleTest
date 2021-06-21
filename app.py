@@ -87,4 +87,4 @@ def uploaded_file(filename):
     return send_from_directory(DOWNLOAD_FOLDER, filename, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(threaded =True)
+    app.run(debug=True)
