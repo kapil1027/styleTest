@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Transform</title>
+</head>
+<body>
+<div align="center">
+    <h1>A.I. transformed Images </h1>
+    <h2>Please select a style you want.</h2>
+
+    <form action="/get-text" method="POST">
+	<h4> ORIGINAL IMAGE  </h4>
+        <li><img src="{{ O_file }}" width="350" height="204" ></li>
+        <br>
+
+        <h4> STYLES AVALIABLE  </h4>
+
+        {% for T_file in output %}
+        <li>
+	    <input type="radio" name="Style" id= {{ T_file }} value= {{ T_file }} />
+            <label for= {{ T_file }} ><img src="{{ T_file }}" width="350" height="204" alt ={{ T_file }} /></label>
+        </li>
+        {% endfor %}
+
+        <input type="submit" value="Select">
+       
+    </form>
+
+</div>
+</body>
+</html>

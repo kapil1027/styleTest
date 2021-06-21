@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Transform</title>
+</head>
+<body>
+<div align="center">
+    <h1>A.I. transformed Images </h1>
+    <h2>Choose your image</h2>
+    <form action="/upload" method=post enctype=multipart/form-data>
+        <p>
+	    <h4>Choosen Style</h4>
+	    <img src="{{ style }}" width="350" height="204" /><br>
+
+
+            <input type=file name=f>
+            <input type=submit value=Transform>
+        </p>
+    </form>
+
+</div>
+</body>
+</html>
